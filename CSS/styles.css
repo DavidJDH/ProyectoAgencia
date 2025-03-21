@@ -146,6 +146,12 @@ header {
     align-items: center;
     padding: 0 1em;
     z-index: 1;
+    transition: 600ms all ease-in-out;
+}
+
+header.transparente {
+    background-color: transparent;
+    box-shadow: none;
 }
 
 header img {
@@ -159,10 +165,119 @@ header nav a {
     margin-left: 1em;
     transition: 300ms ease-in-out all;
 }
+header.transparente nav a {
+    color: rgba(255, 255, 255, 0.9);
+
+}
 
 header nav a.activo, 
 header nav a:hover {
     color: #a97650;
     font-weight: bold;
 
+}
+
+header.transparente nav a.activo, 
+header.transparente nav a:hover {
+    color: white;
+
+}
+
+
+#burger{
+    position: fixed;
+    top:1rem;
+    left: 1rem;
+    cursor: pointer;
+    z-index: 10;
+    display: none;
+}
+
+
+
+#burger .barra{
+    width: 30px;
+    height: 2px;
+    margin: 6px;
+    background-color: #a97c50;
+    transition: 400ms all ease-in-out;
+}
+
+#burger.abierto .barra{
+    background-color: white;
+}
+
+#burger.abierto .barra.superior{
+    transform: translateY(8px) rotateZ(45deg);
+}
+
+#burger.abierto .barra.media{
+    width: 0;
+}
+
+#burger.abierto .barra.inferior{
+    transform: translateY(-8px) rotateZ(-45deg);
+}
+
+@media (max-width: 620px) {
+    #burger {
+        display: block;
+    }
+
+    header{
+        justify-content: flex-end;
+    }
+    header nav {
+        display: none;
+    }
+}
+
+.menu{
+    width: 360px;
+    height: 100vh;
+    background-color: #424242;
+    position: fixed;
+    top: 0;
+    left: -360px;
+    padding-top: 40px;
+    transition: all 700ms ease-in-out;
+}
+
+.menu.abierto{
+    left: 0;
+}
+
+.menu nav{
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.menu nav a {
+    padding: 0.6rem 0;
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 1.7rem;
+    transform: 300ms all ease-in-out;
+}
+
+.menu nav a:hover{
+    color: white;
+}
+
+.menu .Copyright {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 1.2rem;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 0.5rem;
+    text-align: center;
+    width: 100%;
+}
+
+/*Leyout*/
+
+.primera {
+    margin-top: 100vh;
+    
 }
