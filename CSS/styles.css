@@ -360,3 +360,31 @@ header.transparente nav a:hover {
     text-align: center;
 
  }
+
+
+ /*CAJA DE NAVEGACIOn*/
+
+ 
+ .caja-nav img {
+    width: 15%;
+    margin-bottom: 1em;
+    
+ }
+
+ .caja-nav a {
+    border: 1px solid #a97c50;
+    background-color: white;
+    color: #a97c50;
+    font-size: 1rem;
+    font-weight: normal;
+    padding: 0.5em 1em;
+    border-radius: 0.3em;
+    cursor: pointer;
+    transition: all ease-in-out 400ms;
+ }
+
+ .caja-nav a:hover {
+    background-color: #a97c50;
+    color: white;
+ }
+
